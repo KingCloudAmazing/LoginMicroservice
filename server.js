@@ -26,3 +26,6 @@ connectDB()
 .catch((err)=>{
     console.error("Database connection failed: ", err);
 })
+
+//to create a container from the userauth:1.0 image run-> docker run --env-file .env -p 5000:5000 --network mongo-network userauth:1.0
+
