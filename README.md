@@ -16,3 +16,23 @@
         "password":"user_123"<br>
     }<br>
 </p>
+
+<h2>Using the docker application</h2>
+<p>
+    1. Go to the terminal and run: docker pull kingcloudamazing/user_auth_service:1.0 </br>
+    2. After the image is downloaded, download the mongodb.yaml and the .env file as well</br> 
+       and save it in one common file.</br>
+    3. Now go the common file location in the terminal and type: docker compose -f mongodb.yaml up -d</br>
+    4. This will install all the mongo, mongo-express and the program containers and put them in one common network. After installing the containers it will start running them. To confirm if the application is running successfully you can type: </br> 
+    docker logs (name or id of container whose image name is - kingcloudamazing/user_auth_service:1.0)</br>
+    If it shows: 
+        > user-auth-service@1.0.0 start </br>
+        > node server.js </br>
+        </br>
+        MongoDB connected! </br>
+        Server has started running at PORT:5000 </br>
+    Your code is running successfully and you can start giving postman the user credentials.</br>
+    </br>
+    To view all the users just go to localhost:8081, where user:admin and password:pass to see the </br>
+    users details.</br>
+</p>
